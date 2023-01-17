@@ -1,0 +1,18 @@
+.gds-context-menu {
+  overflow: hidden;
+  position: fixed;
+  border-radius: 0.375rem;
+  backdrop-filter: blur(12px);
+  background-color: hsla(
+    var(--primary-hue),
+    calc(
+      var(--primary-saturation) +
+        var(--surface4-saturation-gap)
+    ),
+    calc(
+      var(--primary-lightness) +
+        var(--surface4-lightness-gap)
+    ),
+    0.64
+  );
+}
