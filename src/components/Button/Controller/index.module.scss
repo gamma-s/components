@@ -1,0 +1,174 @@
+body {
+  background-color: $primary-surface4;
+}
+.gds {
+  &-controller-button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: $primary-text1;
+
+    &-name {
+      width: 2rem;
+      height: 2rem;
+      font-weight: 200;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: $primary-surface2;
+      color: $primary-text1;
+      @include basic-transistion;
+    }
+
+    &-description {
+      font-weight: 200;
+    }
+
+    &:hover &-name,
+    &:focus &-name {
+      background-color: transparent;
+      color: $primary-text1;
+      box-shadow: inset 0 0 0 2px $primary-surface3;
+    }
+
+    &:hover &-description,
+    &:focus &-description {
+      color: $primary-text1;
+    }
+
+    &--danger {
+      &-name {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px $danger-surface3;
+        color: $danger-text1;
+      }
+
+      &-description {
+        color: $danger-text1;
+      }
+
+      &:hover &-name,
+      &:focus &-name {
+        color: $danger-text1;
+        box-shadow: none;
+        background-color: $danger-surface2;
+      }
+
+      &:hover &-description,
+      &:focus &-description {
+        color: $danger-text2;
+      }
+    }
+
+    &--secondary {
+      &-name {
+        background-color: $secondary-surface3;
+        color: $secondary-text1;
+      }
+
+      &-description {
+        color: $secondary-text1;
+      }
+
+      &:hover &-name,
+      &:focus &-name {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px $secondary-surface2;
+        color: $secondary-text1;
+      }
+
+      &:hover &-description,
+      &:focus &-description {
+        color: $secondary-text1;
+      }
+    }
+
+    &--ghost {
+      &-name {
+        background-color: transparent;
+        color: $primary-text1;
+      }
+
+      &-description {
+        color: $primary-text1;
+      }
+
+      &:hover &-name,
+      &:focus &-name {
+        color: $primary-text1;
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px $primary-surface3;
+      }
+
+      &:hover &-description,
+      &:focus &-description {
+        color: $primary-text1;
+      }
+    }
+
+    &--tertiary {
+      &-name {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px $tertiary-surface2;
+        color: $tertiary-text1;
+      }
+
+      &-description {
+        color: $tertiary-text1;
+      }
+
+      &:hover &-name,
+      &:focus &-name {
+        background-color: $tertiary-surface4;
+        box-shadow: inset 0 0 0 2px $tertiary-surface3;
+      }
+
+      &:hover &-description,
+      &:focus &-description {
+        color: $tertiary-text2;
+      }
+    }
+
+    &--disabled {
+      opacity: 50%;
+      cursor: not-allowed;
+    }
+
+    &--skeleton {
+      &-description {
+        color: transparent;
+        background-color: $skeleton-surface2;
+      }
+
+      &-name {
+        color: transparent;
+        background-color: $skeleton-surface2;
+      }
+
+      &:hover &-name,
+      &:focus &-name {
+        color: transparent;
+        background-color: $skeleton-surface2;
+        box-shadow: none;
+      }
+
+      &:hover &-description,
+      &:focus &-description {
+        color: transparent;
+        background-color: $skeleton-surface2;
+        box-shadow: none;
+      }
+    }
+
+    &--wide {
+      &-name {
+        border-radius: 3rem;
+        padding: 0 0.5rem;
+        width: initial;
+      }
+    }
+  }
+}
