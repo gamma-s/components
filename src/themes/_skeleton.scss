@@ -1,0 +1,85 @@
+@use "../abstracts/functions" as functions;
+
+$skeleton: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(var(--skeleton-saturation) / var(--saturation-gap)),
+  calc(var(--skeleton-lightness) / var(--lightness-gap))
+);
+
+$skeleton-text1: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) + var(--text1-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) + var(--text1-lightness-gap)
+  )
+);
+
+$skeleton-text2: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) + var(--text2-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) + var(--text2-lightness-gap)
+  )
+);
+
+$skeleton-surface1: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) +
+      var(--surface1-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) +
+      var(--surface1-lightness-gap)
+  )
+);
+
+$skeleton-surface2: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) +
+      var(--surface2-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) +
+      var(--surface2-lightness-gap)
+  )
+);
+
+$skeleton-surface3: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) +
+      var(--surface3-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) +
+      var(--surface3-lightness-gap)
+  )
+);
+
+$skeleton-surface4: functions.hsl-color(
+  var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) +
+      var(--surface4-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) +
+      var(--surface4-lightness-gap)
+  )
+);
+
+$skeleton-surface-shadow: var(--skeleton-hue),
+  calc(
+    var(--skeleton-saturation) +
+      var(--surface-shadow-saturation-gap)
+  ),
+  calc(
+    var(--skeleton-lightness) +
+      var(--surface-shadow-lightness-gap)
+  );
