@@ -1,0 +1,114 @@
+.gds {
+  &-button {
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    color: $primary-text1;
+    border-radius: 0.375rem;
+    max-width: 20rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $primary-surface2;
+    @include basic-transistion;
+
+    &-text {
+      color: unset;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $primary-surface3;
+    }
+
+    &--context {
+      background-color: transparent;
+      color: $primary-text1;
+      width: 100%;
+      justify-content: flex-start;
+      padding: 0.75rem 0.5rem;
+      border-bottom: 1px solid $primary-surface2;
+      border-radius: 0;
+
+      &-text {
+        font-weight: 200;
+        text-transform: none;
+      }
+      &:hover,
+      &:focus {
+        box-shadow: initial;
+        background-color: $primary-surface3;
+      }
+    }
+
+    &--danger {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $danger-surface3;
+      color: $danger-text1;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        background-color: $danger-surface2;
+      }
+    }
+
+    &--secondary {
+      background-color: $secondary-surface3;
+      color: $secondary-text1;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px $secondary-surface2;
+      }
+    }
+
+    &--ghost {
+      background-color: transparent;
+      color: $primary-text1;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px $primary-surface3;
+      }
+    }
+
+    &--tertiary {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $tertiary-surface2;
+      color: $tertiary-text1;
+
+      &:hover,
+      &:focus {
+        background-color: $tertiary-surface4;
+        box-shadow: inset 0 0 0 2px $tertiary-surface3;
+      }
+    }
+
+    &--skeleton {
+      background-color: $skeleton-surface2;
+      color: $skeleton-surface2;
+
+      &:hover,
+      &:focus {
+        background-color: $skeleton-surface2;
+        box-shadow: none;
+      }
+    }
+
+    &--disabled {
+      opacity: 50%;
+      cursor: not-allowed;
+    }
+  }
+}
+
+:global(.gds-button--context--active) {
+  box-shadow: initial;
+  background-color: $primary-surface2;
+}
