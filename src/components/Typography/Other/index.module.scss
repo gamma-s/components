@@ -1,0 +1,22 @@
+.gds {
+  &-overline--text {
+    font-size: 10px;
+    color: $primary-text2;
+    letter-spacing: 1.5;
+    text-transform: uppercase;
+  }
+
+  &-caption--text {
+    font-size: 12px;
+    color: $primary-text2;
+    letter-spacing: 0.4;
+  }
+
+  &-button--text {
+    font-size: 14px;
+    color: $primary-text1;
+    letter-spacing: 1.25;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
