@@ -1,0 +1,77 @@
+@import "../themes/primary";
+@import "../themes/secondary";
+@import "../themes/tertiary";
+@import "../themes/skeleton";
+@import "../themes/danger";
+
+:root {
+  --primary-hue: 230;
+  --primary-saturation: 96%;
+  --primary-lightness: 56%;
+
+  --secondary-hue: 50;
+  --secondary-saturation: 64%;
+  --secondary-lightness: 64%;
+
+  --danger-hue: 0;
+  --danger-saturation: 96%;
+  --danger-lightness: 54%;
+
+  --tertiary-hue: 130;
+  --tertiary-saturation: 80%;
+  --tertiary-lightness: 54%;
+
+  --skeleton-hue: 120;
+  --skeleton-saturation: 64%;
+  --skeleton-lightness: 64%;
+
+  --saturation-gap: 1;
+  --lightness-gap: 1;
+
+  --text1-saturation-gap: -0%;
+  --text1-lightness-gap: -40%;
+
+  --text2-saturation-gap: -64%;
+  --text2-lightness-gap: -24%;
+
+  --surface1-saturation-gap: -72%;
+  --surface1-lightness-gap: +8%;
+
+  --surface2-saturation-gap: -72%;
+  --surface2-lightness-gap: +16%;
+
+  --surface3-saturation-gap: -72%;
+  --surface3-lightness-gap: +24%;
+
+  --surface4-saturation-gap: -72%;
+  --surface4-lightness-gap: +32%;
+
+  --surface-shadow-saturation-gap: -16%;
+  --surface-shadow-lightness-gap: -32%;
+
+  @media (prefers-color-scheme: dark) {
+    --saturation-gap: 2;
+    --lightness-gap: 1.5;
+
+    --text1-saturation-gap: -80%;
+    --text1-lightness-gap: +24%;
+
+    --text2-saturation-gap: -88%;
+    --text2-lightness-gap: +16%;
+
+    --surface1-saturation-gap: -80%;
+    --surface1-lightness-gap: -48%;
+
+    --surface2-saturation-gap: -80%;
+    --surface2-lightness-gap: -40%;
+
+    --surface3-saturation-gap: -80%;
+    --surface3-lightness-gap: -32%;
+
+    --surface4-saturation-gap: -72%;
+    --surface4-lightness-gap: -32%;
+
+    --surface-shadow-saturation-gap: -64%;
+    --surface-shadow-lightness-gap: -56%;
+  }
+}
