@@ -1,0 +1,28 @@
+.gds--app-container {
+  @apply
+  flex
+  items-center
+}
+
+.gds--app-container:after {
+  @apply
+  w-px
+  h-12
+  bg-white/10
+  ml-2
+  content-[''];
+}
+
+.gds--activity-container {
+  @apply
+  p-2
+  flex
+  w-full;
+}
+
+.gds--tab-container {
+  @apply
+  flex
+  overflow-auto
+  mx-2;
+}
