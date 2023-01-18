@@ -5,6 +5,7 @@
     align-items: center;
     color: $primary-text1;
     position: relative;
+    @include primary-font;
 
     &-item {
       display: flex;
@@ -37,12 +38,12 @@
 
     &-text {
       color: $primary-text1;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     &-url {
       color: $primary-text2;
-      font-weight: 200;
+      font-weight: 300;
     }
 
     &--active {
@@ -53,8 +54,17 @@
     }
 
     &--skeleton {
-      background-color: $skeleton-surface2;
-      color: transparent;
+      &-item {
+        background-color: $skeleton-surface2;
+
+        * {
+          color: transparent;
+        }
+
+        &:hover {
+          background-color: $skeleton-surface3;
+        }
+      }
     }
 
     &--new-tab {

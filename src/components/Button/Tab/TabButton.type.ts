@@ -1,4 +1,4 @@
-export type Button = {
+export interface Button extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
@@ -9,4 +9,4 @@ export type Button = {
     url: string;
     title: string;
   };
-};
+}

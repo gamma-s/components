@@ -8,12 +8,11 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './index.type';
-import {prefix} from '../../../settings';
-// import {ContextMenu} from '../ContextMenu';
-
-import styles from './index.module.scss';
+import {Button} from './TabButton.type';
 import ContextMenu from '../../ContextMenu';
+import {prefix} from '../../../settings';
+
+import styles from './TabButton.module.scss';
 
 /**
  * Tab Button component
@@ -40,7 +39,7 @@ const TabButton = ({
   activeId,
   button,
   ...other
-}: Button & React.HTMLAttributes<HTMLDivElement>) => {
+}: Button) => {
   if (typeof button === 'undefined') {
     button = {
       id: 0,
@@ -58,6 +57,7 @@ const TabButton = ({
   const buttonItemClassPrefix = {
     [styles[`${prefix}-tab-button-item`]]: true,
     [styles[`${prefix}-tab-button--active-item`]]: button.id === activeId,
+    [styles[`${prefix}-tab-button--skeleton-item`]]: skeleton,
     [`${prefix}-tab-button-${button.id}`]: true,
   };
 
