@@ -6,6 +6,9 @@
     color: $primary-text1;
     border-radius: 0.375rem;
     max-width: 20rem;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
@@ -13,6 +16,7 @@
 
     background-color: $primary-surface2;
     @include basic-transistion;
+    @include primary-font;
 
     &-text {
       color: unset;

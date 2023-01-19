@@ -1,4 +1,5 @@
-export type Button = {
+export interface IButton
+  extends React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
@@ -11,4 +12,4 @@ export type Button = {
   skeleton?: boolean;
   buttonName?: string;
   buttonDescription?: string;
-};
+}

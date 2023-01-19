@@ -8,28 +8,13 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './index.type';
-import {ButtonText} from '../../components/Typography';
-import {prefix} from '../../settings/';
+import {ButtonText} from '../Typography';
+import {IButton} from './Button.type';
+import {prefix} from '../../settings';
 
-import styles from './index.module.scss';
+import styles from './Button.module.scss';
 
-/**
- * HTML Button component
- * @param {Object} props
- * @param {React.ReactNode} props.children
- * @param {string} props.className
- * @param {boolean} props.disabled
- * @param {boolean} props.skeleton
- * @param {boolean} props.small
- * @param {string} props.kind
- * @param {string} props.href
- * @param {number} props.tabIndex
- * @param {string} props.type
- * @param {Object} props.other
- * @constructor
- */
-const ControllerButton = ({
+const Button = ({
   className,
   disabled,
   skeleton,
@@ -40,9 +25,7 @@ const ControllerButton = ({
   type,
   children,
   ...other
-}: Button &
-  React.HTMLAttributes<HTMLButtonElement> &
-  React.HTMLAttributes<HTMLAnchorElement>) => {
+}: IButton) => {
   const MODIFIER = 'button';
 
   const buttonClassPrefix = {
@@ -95,4 +78,4 @@ const ControllerButton = ({
   }
 };
 
-export default ControllerButton;
+export default Button;
