@@ -1,5 +1,5 @@
-body {
-  background-color: $primary-surface4;
+html > :global(.sb-show-main) {
+  background-color: $primary-surface1;
 }
 .gds {
   &-controller-button {
@@ -7,6 +7,9 @@ body {
     gap: 0.5rem;
     align-items: center;
     color: $primary-text1;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
     &-name {
       width: 2rem;

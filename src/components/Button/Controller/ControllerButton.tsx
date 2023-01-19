@@ -8,11 +8,11 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './index.type';
-import {ButtonText} from '../../../components/Typography';
-import {prefix} from '../../../settings/';
+import {Button} from './ControllerButton.type';
+import {ButtonText} from '../../Typography';
+import {prefix} from '../../../settings';
 
-import styles from './index.module.scss';
+import styles from './ControllerButton.module.scss';
 
 /**
  * Controller Button component
@@ -44,9 +44,7 @@ const ControllerButton = ({
   buttonDescription,
   buttonName,
   ...other
-}: Button &
-  React.HTMLAttributes<HTMLButtonElement> &
-  React.HTMLAttributes<HTMLAnchorElement>) => {
+}: Button) => {
   const MODIFIER = 'controller-button';
 
   const buttonClassPrefix = {
