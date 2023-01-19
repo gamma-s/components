@@ -8,10 +8,10 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './AppButton.type';
+import {Button} from './index.type';
 import {prefix} from '../../../settings';
 
-import styles from './AppButton.module.scss';
+import styles from './index.module.scss';
 
 /**
  * AppButton component

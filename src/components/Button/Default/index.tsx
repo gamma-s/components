@@ -8,11 +8,11 @@
  */
 import classNames from 'classnames';
 
-import {ButtonText} from '../Typography';
-import {IButton} from './Button.type';
-import {prefix} from '../../settings';
+import {ButtonText} from '../../Typography';
+import {IButton} from './index.type';
+import {prefix} from '../../../settings';
 
-import styles from './Button.module.scss';
+import styles from './index.module.scss';
 
 const Button = ({
   className,

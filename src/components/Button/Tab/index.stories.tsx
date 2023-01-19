@@ -1,6 +1,6 @@
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import TabButton from './TabButton';
+import TabButton from '../Tab';
 
 export default {
   title: 'Buttons/TabButton',

@@ -1,17 +1,18 @@
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import Button from './Button';
+import ControllerButton from '.';
 
 export default {
-  title: 'Buttons/Button',
-  component: Button,
+  title: 'Buttons/ControllerButton',
+  component: ControllerButton,
   args: {
-    children: 'Button',
+    buttonDescription: 'Play',
+    buttonName: 'A',
   },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof ControllerButton>;
 
-const Template: ComponentStory<typeof Button> = ({children, ...args}) => {
-  return <Button {...args}>{children}</Button>;
+const Template: ComponentStory<typeof ControllerButton> = args => {
+  return <ControllerButton {...args} />;
 };
 
 export const Primary = Template.bind({});

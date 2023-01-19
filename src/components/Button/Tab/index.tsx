@@ -8,11 +8,11 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './TabButton.type';
+import {Button} from './index.type';
 import ContextMenu from '../../ContextMenu';
 import {prefix} from '../../../settings';
 
-import styles from './TabButton.module.scss';
+import styles from './index.module.scss';
 
 /**
  * Tab Button component

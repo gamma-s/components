@@ -8,11 +8,11 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './ControllerButton.type';
+import {Button} from './index.type';
 import {ButtonText} from '../../Typography';
 import {prefix} from '../../../settings';
 
-import styles from './ControllerButton.module.scss';
+import styles from './index.module.scss';
 
 /**
  * Controller Button component
