@@ -10,6 +10,7 @@ html > :global(.sb-show-main) {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    @include primary-font;
 
     &-name {
       width: 2rem;

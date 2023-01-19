@@ -37,7 +37,7 @@ Danger.args = {
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-  kind: 'danger',
+  kind: 'tertiary',
 };
 
 export const Skeleton = Template.bind({});
