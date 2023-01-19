@@ -4,6 +4,7 @@
     font-size: 16px;
     letter-spacing: 0.5;
     color: $primary-text1;
+    @include primary-font;
   }
 
   &-body--2 {
@@ -11,5 +12,6 @@
     font-size: 14px;
     letter-spacing: 0.25;
     color: $primary-text1;
+    @include primary-font;
   }
 }
