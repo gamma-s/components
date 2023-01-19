@@ -4,12 +4,14 @@
     color: $primary-text2;
     letter-spacing: 1.5;
     text-transform: uppercase;
+    @include primary-font;
   }
 
   &-caption--text {
     font-size: 12px;
     color: $primary-text2;
     letter-spacing: 0.4;
+    @include primary-font;
   }
 
   &-button--text {
@@ -18,5 +20,6 @@
     letter-spacing: 1.25;
     font-weight: 400;
     text-transform: uppercase;
+    @include primary-font;
   }
 }
