@@ -4,3 +4,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   }
 }
+
+@mixin primary-font {
+  font-family: "IBM Plex Sans", sans-serif;
+}
