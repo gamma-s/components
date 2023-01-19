@@ -8,10 +8,10 @@
  */
 import classNames from 'classnames';
 
-import {Button} from './index.type';
+import {Button} from './AppButton.type';
 import {prefix} from '../../../settings';
 
-import styles from './index.module.scss';
+import styles from './AppButton.module.scss';
 
 /**
  * AppButton component
@@ -47,9 +47,7 @@ const AppButton = ({
   buttonDescription,
   buttonImage,
   ...other
-}: Button &
-  React.HTMLAttributes<HTMLButtonElement> &
-  React.HTMLAttributes<HTMLAnchorElement>) => {
+}: Button) => {
   const buttonClassPrefix = {
     [styles[`${prefix}-app-button`]]: true,
     [styles[`${prefix}-app-button--sm`]]: small,
