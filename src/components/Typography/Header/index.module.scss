@@ -4,6 +4,7 @@
     font-weight: 200;
     letter-spacing: -1.5;
     color: $primary-text1;
+    @include primary-font;
   }
 
   &-header--2 {
@@ -11,6 +12,7 @@
     font-weight: 200;
     letter-spacing: -0.5;
     color: $primary-text1;
+    @include primary-font;
   }
 
   &-header--3 {
@@ -18,6 +20,7 @@
     font-weight: 400;
     letter-spacing: 0;
     color: $primary-text1;
+    @include primary-font;
   }
 
   &-header--4 {
@@ -25,6 +28,7 @@
     font-weight: 400;
     letter-spacing: 0.25;
     color: $primary-text1;
+    @include primary-font;
   }
 
   &-header--5 {
@@ -32,6 +36,7 @@
     font-weight: 400;
     letter-spacing: 0;
     color: $primary-text1;
+    @include primary-font;
   }
 
   &-header--6 {
@@ -39,5 +44,6 @@
     font-weight: 500;
     letter-spacing: 0.15;
     color: $primary-text2;
+    @include primary-font;
   }
 }
