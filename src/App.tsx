@@ -15,9 +15,9 @@ import {
 } from './components/Typography';
 
 import AppButton from './components/Button/App';
+import {Button} from './components/Button';
 import ControllerButton from './components/Button/Controller';
 import TabButton from './components/Button/Tab';
-import Button from './components/Button';
 
 const App = () => {
   return (
