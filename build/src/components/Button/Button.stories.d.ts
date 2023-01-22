@@ -1,0 +1,11 @@
+import { ComponentStory, Meta } from '@storybook/react';
+import Button from './Button';
+declare const meta: Meta;
+export default meta;
+export declare const Template: ComponentStory<typeof Button>;
+export declare const Primary: ComponentStory<({ className, disabled, skeleton, small, kind, href, tabIndex, type, children, ...other }: import("./Button.type").IButton) => JSX.Element>;
+export declare const Secondary: ComponentStory<({ className, disabled, skeleton, small, kind, href, tabIndex, type, children, ...other }: import("./Button.type").IButton) => JSX.Element>;
+export declare const Ghost: ComponentStory<({ className, disabled, skeleton, small, kind, href, tabIndex, type, children, ...other }: import("./Button.type").IButton) => JSX.Element>;
+export declare const Danger: ComponentStory<({ className, disabled, skeleton, small, kind, href, tabIndex, type, children, ...other }: import("./Button.type").IButton) => JSX.Element>;
+export declare const Tertiary: ComponentStory<({ className, disabled, skeleton, small, kind, href, tabIndex, type, children, ...other }: import("./Button.type").IButton) => JSX.Element>;
+export declare const Skeleton: ComponentStory<({ className, disabled, skeleton, small, kind, href, tabIndex, type, children, ...other }: import("./Button.type").IButton) => JSX.Element>;

@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Subtitle2 = exports.Subtitle1 = exports.OverlineText = exports.CaptionText = exports.ButtonText = exports.Header6 = exports.Header5 = exports.Header4 = exports.Header3 = exports.Header2 = exports.Header1 = exports.Body2 = exports.Body1 = void 0;
+const Body_1 = require("./Body");
+Object.defineProperty(exports, "Body1", { enumerable: true, get: function () { return Body_1.Body1; } });
+Object.defineProperty(exports, "Body2", { enumerable: true, get: function () { return Body_1.Body2; } });
+const Other_1 = require("./Other");
+Object.defineProperty(exports, "ButtonText", { enumerable: true, get: function () { return Other_1.ButtonText; } });
+Object.defineProperty(exports, "CaptionText", { enumerable: true, get: function () { return Other_1.CaptionText; } });
+Object.defineProperty(exports, "OverlineText", { enumerable: true, get: function () { return Other_1.OverlineText; } });
+const Header_1 = require("./Header");
+Object.defineProperty(exports, "Header1", { enumerable: true, get: function () { return Header_1.Header1; } });
+Object.defineProperty(exports, "Header2", { enumerable: true, get: function () { return Header_1.Header2; } });
+Object.defineProperty(exports, "Header3", { enumerable: true, get: function () { return Header_1.Header3; } });
+Object.defineProperty(exports, "Header4", { enumerable: true, get: function () { return Header_1.Header4; } });
+Object.defineProperty(exports, "Header5", { enumerable: true, get: function () { return Header_1.Header5; } });
+Object.defineProperty(exports, "Header6", { enumerable: true, get: function () { return Header_1.Header6; } });
+const Subtitle_1 = require("./Subtitle");
+Object.defineProperty(exports, "Subtitle1", { enumerable: true, get: function () { return Subtitle_1.Subtitle1; } });
+Object.defineProperty(exports, "Subtitle2", { enumerable: true, get: function () { return Subtitle_1.Subtitle2; } });
+//# sourceMappingURL=index.js.map
