@@ -1,0 +1,35 @@
+.gds {
+  &-app-container {
+    display: flex;
+    align-items: center;
+    &:after {
+      content: "";
+      margin-left: 0.5rem;
+      width: 1px;
+      height: 3rem;
+      background-color: $primary-surface3;
+    }
+  }
+
+  &-activity-container {
+    display: flex;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  &-tab-container {
+    display: flex;
+    overflow: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &-tab-button--new-tab {
+    align-self: center;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: $primary-surface2;
+    cursor: pointer;
+    color: $primary-text2;
+  }
+}
