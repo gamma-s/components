@@ -22,48 +22,29 @@ export default [
   } as ComponentMeta<typeof Activity>,
 ];
 
-export const AppsContainer: ComponentStory<typeof Apps> = ({
-  children,
-  ...args
-}) => {
-  return (
-    <Apps {...args}>
-      <AppButton
-        buttonDescription="This is a button"
-        buttonImage="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
-      />
-      <AppButton
-        buttonDescription="This is a another button"
-        buttonImage="https://www.youtube.com/s/desktop/82a4cf4f/img/favicon_144x144.png"
-      />
-    </Apps>
-  );
-};
-
-export const TabsContainer: ComponentStory<typeof Apps> = ({
-  children,
-  ...args
-}) => {
-  return (
-    <Tabs {...args}>
-      <TabButton
-        button={{url: 'www.google.com', title: 'Google', id: 1}}
-        activeId={1}
-      />
-      <TabButton button={{url: 'www.youtube.com', title: 'Youtube', id: 2}} />
-    </Tabs>
-  );
-};
-
-export const ActivityContainer: ComponentStory<typeof Apps> = ({
-  children,
-  ...args
-}) => {
+export const Container: ComponentStory<typeof Apps> = ({children, ...args}) => {
   return (
     <Activity {...args}>
       <>
-        <AppsContainer />
-        <TabsContainer />
+        <Apps {...args}>
+          <AppButton
+            buttonDescription="This is a button"
+            buttonImage="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
+          />
+          <AppButton
+            buttonDescription="This is a another button"
+            buttonImage="https://www.youtube.com/s/desktop/82a4cf4f/img/favicon_144x144.png"
+          />
+        </Apps>
+        <Tabs>
+          <TabButton
+            button={{url: 'www.google.com', title: 'Google', id: 1}}
+            activeId={1}
+          />
+          <TabButton
+            button={{url: 'www.youtube.com', title: 'Youtube', id: 2}}
+          />
+        </Tabs>
       </>
     </Activity>
   );
