@@ -1,52 +1,46 @@
-.gds-controller-wrapper {
-  margin: 0.5rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
+.gds {
+  &-controller {
+    &-app {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
 
-.gds-controller-container {
-  display: flex;
-  left: 0;
-  padding: 0.5rem;
-  align-items: center;
-  width: 100%;
-  height: 3rem;
-  background-color: $primary-surface4;
-  padding: 0;
+    &-wrapper {
+      margin: 0.5rem;
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
 
-  .gds-controller-button-name {
-    color: $primary-text1;
-  }
+    &-container {
+      display: flex;
+      left: 0;
+      padding: 0.5rem;
+      align-items: center;
+      width: 100%;
+      height: 3rem;
+      background-color: $primary-surface4;
+      padding: 0;
+      backdrop-filter: blur(10px);
 
-  &--left {
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    padding: 0.5rem;
-  }
+      &--left {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        padding: 0.5rem;
+      }
 
-  &--right {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    padding: 0.5rem;
-  }
-}
-
-.gds-app-controller-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  @include basic-transistion;
-  @include primary-font;
-
-  .gds-controller-wrapper {
-    backdrop-filter: blur(0.5rem);
-    background-color: $primary-surface4;
+      &--right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        padding: 0.5rem;
+      }
+    }
   }
 }

@@ -116,7 +116,7 @@ export const AppControls = ({
   ...other
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const containerClassPrefix = {
-    [styles[`${prefix}-app-controller-container`]]: true,
+    [styles[`${prefix}-controller-app`]]: true,
   };
 
   const buttonClasses = classNames(className, containerClassPrefix);

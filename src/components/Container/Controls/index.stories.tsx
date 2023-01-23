@@ -34,8 +34,18 @@ export const ControlsContainer: ComponentStory<typeof Controls> = ({
 }) => {
   return (
     <Controls {...args}>
-      <ControlsLeftContainer />
-      <ControlsRightContainer />
+      <ControlsLeft>
+        <ControllerButton
+          buttonDescription="GAMMA"
+          buttonName="HOME"
+          kind="tertiary"
+          wide
+        />
+      </ControlsLeft>
+      <ControlsRight>
+        <ControllerButton buttonDescription="Accept" buttonName="X" />
+        <ControllerButton buttonDescription="Back" buttonName="B" />
+      </ControlsRight>
     </Controls>
   );
 };
@@ -75,8 +85,18 @@ export const AppControlsContainer: ComponentStory<typeof AppControls> = ({
   return (
     <AppControls {...args}>
       <Controls>
-        <ControlsLeftContainer />
-        <ControlsRightContainer />
+        <ControlsLeft>
+          <ControllerButton
+            buttonDescription="GAMMA"
+            buttonName="HOME"
+            kind="tertiary"
+            wide
+          />
+        </ControlsLeft>
+        <ControlsRight>
+          <ControllerButton buttonDescription="Accept" buttonName="X" />
+          <ControllerButton buttonDescription="Back" buttonName="B" />
+        </ControlsRight>
       </Controls>
     </AppControls>
   );
