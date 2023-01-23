@@ -8,78 +8,39 @@ $tertiary: functions.hsl-color(
 
 $tertiary-text1: functions.hsl-color(
   var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) + var(--text1-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) + var(--text1-lightness-gap)
-  )
+  calc(var(--tertiary-saturation) + var(--text1-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--text1-lightness-gap))
 );
 
 $tertiary-text2: functions.hsl-color(
   var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) + var(--text2-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) + var(--text2-lightness-gap)
-  )
+  calc(var(--tertiary-saturation) + var(--text2-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--text2-lightness-gap))
 );
 
 $tertiary-surface1: functions.hsl-color(
   var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) +
-      var(--surface1-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) +
-      var(--surface1-lightness-gap)
-  )
+  calc(var(--tertiary-saturation) + var(--surface1-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--surface1-lightness-gap))
 );
 
 $tertiary-surface2: functions.hsl-color(
   var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) +
-      var(--surface2-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) +
-      var(--surface2-lightness-gap)
-  )
+  calc(var(--tertiary-saturation) + var(--surface2-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--surface2-lightness-gap))
 );
 
 $tertiary-surface3: functions.hsl-color(
   var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) +
-      var(--surface3-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) +
-      var(--surface3-lightness-gap)
-  )
+  calc(var(--tertiary-saturation) + var(--surface3-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--surface3-lightness-gap))
 );
 
 $tertiary-surface4: functions.hsl-color(
   var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) +
-      var(--surface4-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) +
-      var(--surface4-lightness-gap)
-  )
+  calc(var(--tertiary-saturation) + var(--surface4-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--surface4-lightness-gap))
 );
 
-$tertiary-surface-shadow: var(--tertiary-hue),
-  calc(
-    var(--tertiary-saturation) +
-      var(--surface-shadow-saturation-gap)
-  ),
-  calc(
-    var(--tertiary-lightness) +
-      var(--surface-shadow-lightness-gap)
-  );
+$tertiary-surface-shadow: var(--tertiary-hue), calc(var(--tertiary-saturation) + var(--surface-shadow-saturation-gap)),
+  calc(var(--tertiary-lightness) + var(--surface-shadow-lightness-gap));

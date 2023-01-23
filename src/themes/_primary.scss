@@ -7,74 +7,39 @@ $primary: functions.hsl-color(
 
 $primary-text1: functions.hsl-color(
   var(--primary-hue),
-  calc(
-    var(--primary-saturation) + var(--text1-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) + var(--text1-lightness-gap)
-  )
+  calc(var(--primary-saturation) + var(--text1-saturation-gap)),
+  calc(var(--primary-lightness) + var(--text1-lightness-gap))
 );
 
 $primary-text2: functions.hsl-color(
   var(--primary-hue),
-  calc(
-    var(--primary-saturation) + var(--text2-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) + var(--text2-lightness-gap)
-  )
+  calc(var(--primary-saturation) + var(--text2-saturation-gap)),
+  calc(var(--primary-lightness) + var(--text2-lightness-gap))
 );
 
 $primary-surface1: functions.hsl-color(
   var(--primary-hue),
-  calc(
-    var(--primary-saturation) +
-      var(--surface1-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) + var(--surface1-lightness-gap)
-  )
+  calc(var(--primary-saturation) + var(--surface1-saturation-gap)),
+  calc(var(--primary-lightness) + var(--surface1-lightness-gap))
 );
 
 $primary-surface2: functions.hsl-color(
   var(--primary-hue),
-  calc(
-    var(--primary-saturation) +
-      var(--surface2-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) + var(--surface2-lightness-gap)
-  )
+  calc(var(--primary-saturation) + var(--surface2-saturation-gap)),
+  calc(var(--primary-lightness) + var(--surface2-lightness-gap))
 );
 
 $primary-surface3: functions.hsl-color(
   var(--primary-hue),
-  calc(
-    var(--primary-saturation) +
-      var(--surface3-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) + var(--surface3-lightness-gap)
-  )
+  calc(var(--primary-saturation) + var(--surface3-saturation-gap)),
+  calc(var(--primary-lightness) + var(--surface3-lightness-gap))
 );
 
 $primary-surface4: functions.hsl-color(
   var(--primary-hue),
-  calc(
-    var(--primary-saturation) +
-      var(--surface4-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) + var(--surface4-lightness-gap)
-  )
+  calc(var(--primary-saturation) + var(--surface4-saturation-gap)),
+  calc(var(--primary-lightness) + var(--surface4-lightness-gap))
 );
 
-$primary-surface-shadow: var(--primary-hue),
-  calc(
-    var(--primary-saturation) +
-      var(--surface-shadow-saturation-gap)
-  ),
-  calc(
-    var(--primary-lightness) +
-      var(--surface-shadow-lightness-gap)
-  );
+$primary-surface-shadow: var(--primary-hue), calc(var(--primary-saturation) + var(--surface-shadow-saturation-gap)),
+  calc(var(--primary-lightness) + var(--surface-shadow-lightness-gap));

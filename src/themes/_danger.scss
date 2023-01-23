@@ -8,70 +8,39 @@ $danger: functions.hsl-color(
 
 $danger-text1: functions.hsl-color(
   var(--danger-hue),
-  calc(
-    var(--danger-saturation) + var(--text1-saturation-gap)
-  ),
+  calc(var(--danger-saturation) + var(--text1-saturation-gap)),
   calc(var(--danger-lightness) + var(--text1-lightness-gap))
 );
 
 $danger-text2: functions.hsl-color(
   var(--danger-hue),
-  calc(
-    var(--danger-saturation) + var(--text2-saturation-gap)
-  ),
+  calc(var(--danger-saturation) + var(--text2-saturation-gap)),
   calc(var(--danger-lightness) + var(--text2-lightness-gap))
 );
 
 $danger-surface1: functions.hsl-color(
   var(--danger-hue),
-  calc(
-    var(--danger-saturation) +
-      var(--surface1-saturation-gap)
-  ),
-  calc(
-    var(--danger-lightness) + var(--surface1-lightness-gap)
-  )
+  calc(var(--danger-saturation) + var(--surface1-saturation-gap)),
+  calc(var(--danger-lightness) + var(--surface1-lightness-gap))
 );
 
 $danger-surface2: functions.hsl-color(
   var(--danger-hue),
-  calc(
-    var(--danger-saturation) +
-      var(--surface2-saturation-gap)
-  ),
-  calc(
-    var(--danger-lightness) + var(--surface2-lightness-gap)
-  )
+  calc(var(--danger-saturation) + var(--surface2-saturation-gap)),
+  calc(var(--danger-lightness) + var(--surface2-lightness-gap))
 );
 
 $danger-surface3: functions.hsl-color(
   var(--danger-hue),
-  calc(
-    var(--danger-saturation) +
-      var(--surface3-saturation-gap)
-  ),
-  calc(
-    var(--danger-lightness) + var(--surface3-lightness-gap)
-  )
+  calc(var(--danger-saturation) + var(--surface3-saturation-gap)),
+  calc(var(--danger-lightness) + var(--surface3-lightness-gap))
 );
 
 $danger-surface4: functions.hsl-color(
   var(--danger-hue),
-  calc(
-    var(--danger-saturation) +
-      var(--surface4-saturation-gap)
-  ),
-  calc(
-    var(--danger-lightness) + var(--surface4-lightness-gap)
-  )
+  calc(var(--danger-saturation) + var(--surface4-saturation-gap)),
+  calc(var(--danger-lightness) + var(--surface4-lightness-gap))
 );
 
-$danger-surface-shadow: var(--danger-hue),
-  calc(
-    var(--danger-saturation) +
-      var(--surface-shadow-saturation-gap)
-  ),
-  calc(
-    var(--danger-lightness) +
-      var(--surface-shadow-lightness-gap)
-  );
+$danger-surface-shadow: var(--danger-hue), calc(var(--danger-saturation) + var(--surface-shadow-saturation-gap)),
+  calc(var(--danger-lightness) + var(--surface-shadow-lightness-gap));
