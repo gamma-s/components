@@ -8,7 +8,7 @@
 
 import classNames from 'classnames';
 import {prefix} from '../../../settings/';
-import './index.css';
+import styles from './index.module.scss';
 
 /**
  * Activity container
@@ -24,7 +24,7 @@ export const Activity = ({
   ...other
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const containerClassPrefix = {
-    [`${prefix}-activity-container`]: true,
+    [styles[`${prefix}-activity-container`]]: true,
   };
 
   const buttonClasses = classNames(className, containerClassPrefix);
@@ -56,13 +56,13 @@ export const Tabs = ({
   ...other
 }: React.HTMLAttributes<HTMLDivElement> & {onClickNewTab?: () => void}) => {
   const containerClassPrefix = {
-    [`${prefix}-tab-container`]: true,
-    [`${prefix}-tab-button-container`]: true,
+    [styles[`${prefix}-tab-container`]]: true,
+    [styles[`${prefix}-tab-button-container`]]: true,
   };
 
   const newTabClassPrefix = {
-    [`${prefix}-tab-button--new-tab`]: true,
-    [`${prefix}-tab-button-item`]: true,
+    [styles[`${prefix}-tab-button--new-tab`]]: true,
+    [styles[`${prefix}-tab-button-item`]]: true,
   };
 
   const buttonClasses = classNames(className, containerClassPrefix);
@@ -97,7 +97,7 @@ export const Apps = ({
   ...other
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const containerClassPrefix = {
-    [`${prefix}-app-container`]: true,
+    [styles[`${prefix}-app-container`]]: true,
   };
 
   const buttonClasses = classNames(className, containerClassPrefix);
