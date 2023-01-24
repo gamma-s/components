@@ -41,5 +41,8 @@ $primary-surface4: functions.hsl-color(
   calc(var(--primary-lightness) + var(--surface4-lightness-gap))
 );
 
-$primary-surface-shadow: var(--primary-hue), calc(var(--primary-saturation) + var(--surface-shadow-saturation-gap)),
-  calc(var(--primary-lightness) + var(--surface-shadow-lightness-gap));
+$primary-surface-shadow: functions.hsl-color(
+  var(--primary-hue),
+  calc(var(--primary-saturation) + var(--surface-shadow-saturation-gap)),
+  calc(var(--primary-lightness) + var(--surface-shadow-lightness-gap))
+);
