@@ -4,23 +4,11 @@ import TabButton from '../../Button/Tab';
 
 import {Apps, Tabs, Activity} from './';
 
-export default [
-  {
-    title: 'Container/Apps',
-    component: Apps,
-    args: {},
-  } as ComponentMeta<typeof Apps>,
-  {
-    title: 'Container/Tabs',
-    component: Tabs,
-    args: {},
-  } as ComponentMeta<typeof Tabs>,
-  {
-    title: 'Container/Activity',
-    component: Activity,
-    args: {},
-  } as ComponentMeta<typeof Activity>,
-];
+export default {
+  title: 'Container/Activity',
+  component: Activity,
+  args: {},
+} as ComponentMeta<typeof Activity>;
 
 export const Container: ComponentStory<typeof Apps> = ({children, ...args}) => {
   return (

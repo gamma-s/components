@@ -5,28 +5,11 @@ import TabButton from '../../Button/Tab';
 
 import {Controls, ControlsLeft, ControlsRight, AppControls} from './';
 
-export default [
-  {
-    title: 'Container/Controls',
-    component: Controls,
-    args: {},
-  } as ComponentMeta<typeof Controls>,
-  {
-    title: 'Container/ControlsLeft',
-    component: ControlsLeft,
-    args: {},
-  } as ComponentMeta<typeof ControlsLeft>,
-  {
-    title: 'Container/ControlsRight',
-    component: ControlsRight,
-    args: {},
-  } as ComponentMeta<typeof ControlsRight>,
-  {
-    title: 'Container/AppControls',
-    component: AppControls,
-    args: {},
-  } as ComponentMeta<typeof AppControls>,
-];
+export default {
+  title: 'Container/Controls',
+  component: Controls,
+  args: {},
+};
 
 export const ControlsContainer: ComponentStory<typeof Controls> = ({
   children,
