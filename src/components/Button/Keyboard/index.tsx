@@ -6,6 +6,7 @@
  * Module dependencies
  */
 import classNames from 'classnames';
+import {classPrefix} from '../../../helpers';
 
 import {prefix} from '../../../settings';
 
@@ -24,28 +25,26 @@ const KeyboardButton = ({
   column,
   ...other
 }: Button & React.HTMLAttributes<HTMLButtonElement>) => {
-  const modifier = 'keyboard-button';
-  const buttonClassPrefix = {
-    [styles[`${prefix}-${modifier}`]]: true,
-    [styles[`${prefix}-${modifier}-caps`]]: type === 'caps',
-    [styles[`${prefix}-${modifier}-shift`]]: type === 'shift',
-    [styles[`${prefix}-${modifier}-tab`]]: type === 'tab',
-    [styles[`${prefix}-${modifier}-backspace`]]: type === 'backspace',
-    [styles[`${prefix}-${modifier}-space`]]: type === 'space',
-    [styles[`${prefix}-${modifier}-arrow-left`]]: type === 'arrow-left',
-    [styles[`${prefix}-${modifier}-arrow-right`]]: type === 'arrow-right',
-    [styles[`${prefix}-${modifier}-lang`]]: type === 'lang',
-    [styles[`${prefix}-${modifier}-paste`]]: type === 'paste',
-    [styles[`${prefix}-${modifier}-close-keyboard`]]: type === 'close-keyboard',
-    [styles[`${prefix}-${modifier}-enter`]]: type === 'enter',
-    [styles[`${prefix}-${modifier}-skeleton`]]: skeleton,
-    [styles[`${prefix}-${modifier}-disabled`]]: disabled,
-  };
-
-  const buttonClasses = classNames(className, buttonClassPrefix);
+  const container = classPrefix(styles, 'keyboard-button', [
+    {
+      caps: type === 'caps',
+      shift: type === 'shift',
+      tab: type === 'tab',
+      space: type === 'space',
+      lang: type === 'lang',
+      paste: type === 'paste',
+      enter: type === 'enter',
+      backspace: type === 'backspace',
+      'close-keyboard': type === 'close-keyboard',
+      'arrow-left': type === 'arrow-left',
+      'arrow-right': type === 'arrow-right',
+      skeleton: skeleton,
+      disabled: disabled,
+    },
+  ]);
 
   const commonProps = {
-    className: buttonClasses,
+    className: classNames(className, container),
     tabIndex: tabIndex,
   };
 
@@ -53,14 +52,18 @@ const KeyboardButton = ({
     disabled,
   };
 
+  const altProps = {
+    className: classNames(classPrefix(styles, 'keyboard-button-alt')),
+  };
+
+  const keyProps = {
+    className: classNames(classPrefix(styles, 'keyboard-button-key')),
+  };
+
   return (
     <button {...other} {...commonProps} {...otherProps}>
-      {alt && (
-        <span className={styles[`${prefix}-${modifier}-alt`]}>{alt}</span>
-      )}
-      <span className={styles[`${prefix}-${modifier}-key`]}>
-        {keyCap || children}
-      </span>
+      {alt && <span {...altProps}>{alt}</span>}
+      <span {...keyProps}>{keyCap || children}</span>
     </button>
   );
 };
