@@ -6,11 +6,9 @@
 /**
  * Module dependencies
  */
-import classNames from 'classnames';
-
 import {Button} from './index.type';
 import {ButtonText} from '../../Typography';
-import {prefix} from '../../../settings';
+import {classPrefix} from '../../../helpers';
 
 import styles from './index.module.scss';
 
@@ -45,53 +43,48 @@ const ControllerButton = ({
   buttonName,
   ...other
 }: Button) => {
-  const MODIFIER = 'controller-button';
+  const classNames = new classPrefix(styles, 'controller-button');
 
-  const buttonClassPrefix = {
-    [styles[`${prefix}-${MODIFIER}`]]: true,
-    [styles[`${prefix}-${MODIFIER}--sm`]]: small,
-    [styles[`${prefix}-${MODIFIER}--primary`]]: kind === 'primary',
-    [styles[`${prefix}-${MODIFIER}--danger`]]: kind === 'danger',
-    [styles[`${prefix}-${MODIFIER}--secondary`]]: kind === 'secondary',
-    [styles[`${prefix}-${MODIFIER}--ghost`]]: kind === 'ghost',
-    [styles[`${prefix}-${MODIFIER}--tertiary`]]: kind === 'tertiary',
-    [styles[`${prefix}-${MODIFIER}--wide`]]: wide,
-    [styles[`${prefix}-${MODIFIER}--disabled`]]: disabled,
-    [styles[`${prefix}-${MODIFIER}--skeleton`]]: skeleton,
-  };
+  const buttonClassPrefix = classNames.create({
+    sm: small,
+    primary: kind === 'primary',
+    danger: kind === 'danger',
+    secondary: kind === 'secondary',
+    ghost: kind === 'ghost',
+    tertiary: kind === 'tertiary',
+    wide: wide,
+    disabled: disabled,
+    skeleton: skeleton,
+  });
 
-  const nameClassPrefix = {
-    [styles[`${prefix}-${MODIFIER}-name`]]: true,
-    [styles[`${prefix}-${MODIFIER}--sm-name`]]: small,
-    [styles[`${prefix}-${MODIFIER}--primary-name`]]: kind === 'primary',
-    [styles[`${prefix}-${MODIFIER}--danger-name`]]: kind === 'danger',
-    [styles[`${prefix}-${MODIFIER}--secondary-name`]]: kind === 'secondary',
-    [styles[`${prefix}-${MODIFIER}--ghost-name`]]: kind === 'ghost',
-    [styles[`${prefix}-${MODIFIER}--tertiary-name`]]: kind === 'tertiary',
-    [styles[`${prefix}-${MODIFIER}--wide-name`]]: wide,
-    [styles[`${prefix}-${MODIFIER}--disabled-name`]]: disabled,
-    [styles[`${prefix}-${MODIFIER}--skeleton-name`]]: skeleton,
-  };
+  const names = classNames.create({
+    name: true,
+    'sm-name': small,
+    'primary-name': kind === 'primary',
+    'danger-name': kind === 'danger',
+    'secondary-name': kind === 'secondary',
+    'ghost-name': kind === 'ghost',
+    'tertiary-name': kind === 'tertiary',
+    'wide-name': wide,
+    'disabled-name': disabled,
+    'skeleton-name': skeleton,
+  });
 
-  const descriptionClassPrefix = {
-    [styles[`${prefix}-${MODIFIER}-description`]]: true,
-    [styles[`${prefix}-${MODIFIER}--sm-description`]]: small,
-    [styles[`${prefix}-${MODIFIER}--primary-description`]]: kind === 'primary',
-    [styles[`${prefix}-${MODIFIER}--danger-description`]]: kind === 'danger',
-    [styles[`${prefix}-${MODIFIER}--secondary-description`]]:
-      kind === 'secondary',
-    [styles[`${prefix}-${MODIFIER}--ghost-description`]]: kind === 'ghost',
-    [styles[`${prefix}-${MODIFIER}--tertiary-description`]]:
-      kind === 'tertiary',
-    [styles[`${prefix}-${MODIFIER}--wide-description`]]: wide,
-    [styles[`${prefix}-${MODIFIER}--disabled-description`]]: disabled,
-    [styles[`${prefix}-${MODIFIER}--skeleton-description`]]: skeleton,
-  };
-
-  const buttonClasses = classNames(className, buttonClassPrefix);
+  const descriptions = classNames.create({
+    description: true,
+    'sm-description': small,
+    'primary-description': kind === 'primary',
+    'danger-description': kind === 'danger',
+    'secondary-description': kind === 'secondary',
+    'ghost-description': kind === 'ghost',
+    'tertiary-description': kind === 'tertiary',
+    'wide-description': wide,
+    'disabled-description': disabled,
+    'skeleton-description': skeleton,
+  });
 
   const commonProps = {
-    className: buttonClasses,
+    className: buttonClassPrefix,
     tabIndex: tabIndex,
   };
 
@@ -103,12 +96,8 @@ const ControllerButton = ({
   if (typeof href === 'undefined') {
     return (
       <button {...other} {...commonProps} {...otherProps}>
-        <ButtonText className={classNames(nameClassPrefix)}>
-          {buttonName}
-        </ButtonText>
-        <ButtonText className={classNames(descriptionClassPrefix)}>
-          {buttonDescription}
-        </ButtonText>
+        <ButtonText className={names}>{buttonName}</ButtonText>
+        <ButtonText className={descriptions}>{buttonDescription}</ButtonText>
       </button>
     );
   } else {
@@ -120,12 +109,8 @@ const ControllerButton = ({
 
     return (
       <a {...other} {...anchorProps} {...commonProps} {...otherProps}>
-        <ButtonText className={classNames(nameClassPrefix)}>
-          {buttonName}
-        </ButtonText>
-        <ButtonText className={classNames(descriptionClassPrefix)}>
-          {buttonDescription}
-        </ButtonText>
+        <ButtonText className={names}>{buttonName}</ButtonText>
+        <ButtonText className={descriptions}>{buttonDescription}</ButtonText>
       </a>
     );
   }
