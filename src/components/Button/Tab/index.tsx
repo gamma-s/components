@@ -13,6 +13,7 @@ import ContextMenu from '../../ContextMenu';
 import {prefix} from '../../../settings';
 
 import styles from './index.module.scss';
+import {classPrefix} from '../../../helpers';
 
 /**
  * Tab Button component
@@ -48,20 +49,24 @@ const TabButton = ({
     };
   }
 
-  const buttonClassPrefix = {
-    [styles[`${prefix}-tab-button`]]: true,
-    [styles[`${prefix}-tab-button--active`]]: button.id === activeId,
-    [styles[`${prefix}-tab-button--skeleton`]]: skeleton,
-  };
+  const classNames = new classPrefix(styles, 'tab-button');
 
-  const buttonItemClassPrefix = {
-    [styles[`${prefix}-tab-button-item`]]: true,
-    [styles[`${prefix}-tab-button--active-item`]]: button.id === activeId,
-    [styles[`${prefix}-tab-button--skeleton-item`]]: skeleton,
-    [`${prefix}-tab-button-${button.id}`]: true,
-  };
+  const buttonClasses = classNames.create(
+    {
+      active: button.id === activeId,
+      skeleton: skeleton,
+    },
+    className
+  );
 
-  const buttonClasses = classNames(className, buttonClassPrefix);
+  const buttonItemClasses = classNames.create(
+    {
+      item: true,
+      'active-item': button.id === activeId,
+      'skeleton-item': skeleton,
+    },
+    `${prefix}-tab-button-${button.id}`
+  );
 
   const commonProps = {
     className: buttonClasses,
@@ -74,18 +79,16 @@ const TabButton = ({
 
   return (
     <div {...other} {...commonProps} {...otherProps}>
-      <div className={classNames(buttonItemClassPrefix)}>
-        <div className={styles[`${prefix}-tab-button-text`]}>
-          {button.title}
-        </div>
-        <div className={styles[`${prefix}-tab-button-url`]}>{button.url}</div>
+      <div className={buttonItemClasses}>
+        <div className={classNames.action('text')}>{button.title}</div>
+        <div className={classNames.action('url')}>{button.url}</div>
       </div>
       {children && (
         <ContextMenu
           target={`${prefix}-tab-button-${button.id}`}
           position="top"
           fill={true}
-          container={`${prefix}-tab-button--container`}
+          container={classNames.action('container')}
         >
           {children}
         </ContextMenu>
