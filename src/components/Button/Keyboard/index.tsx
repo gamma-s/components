@@ -5,10 +5,7 @@
 /**
  * Module dependencies
  */
-import classNames from 'classnames';
 import {classPrefix} from '../../../helpers';
-
-import {prefix} from '../../../settings';
 
 import styles from './index.module.scss';
 import {Button} from './index.type';
@@ -25,7 +22,9 @@ const KeyboardButton = ({
   column,
   ...other
 }: Button & React.HTMLAttributes<HTMLButtonElement>) => {
-  const container = classPrefix(styles, 'keyboard-button', [
+  const classNames = new classPrefix(styles, 'keyboard-button');
+
+  const container = classNames.create(
     {
       caps: type === 'caps',
       shift: type === 'shift',
@@ -41,10 +40,11 @@ const KeyboardButton = ({
       skeleton: skeleton,
       disabled: disabled,
     },
-  ]);
+    className
+  );
 
   const commonProps = {
-    className: classNames(className, container),
+    className: container,
     tabIndex: tabIndex,
   };
 
@@ -53,11 +53,11 @@ const KeyboardButton = ({
   };
 
   const altProps = {
-    className: classNames(classPrefix(styles, 'keyboard-button-alt')),
+    className: classNames.action('alt'),
   };
 
   const keyProps = {
-    className: classNames(classPrefix(styles, 'keyboard-button-key')),
+    className: classNames.action('key'),
   };
 
   return (

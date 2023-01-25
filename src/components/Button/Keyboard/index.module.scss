@@ -19,65 +19,65 @@
     box-shadow: 0 0 0 2px $secondary-surface4, inset -1px 0px 10px $secondary-surface1;
     color: $secondary-text1;
 
-    span {
-      font-size: calc(var(--key-size) / 3.4);
-    }
-
     &:hover {
       box-shadow: inset 0 0 0 2px rgb(var($secondary-surface2));
       cursor: pointer;
     }
 
-    &-alt {
+    &--key {
+      font-size: calc(var(--key-size) / 3.4);
+    }
+
+    &--alt {
       font-weight: 200;
       color: $secondary-text2;
     }
 
-    &-tab {
+    &--tab {
       background-color: $secondary-surface2;
       min-width: initial;
       width: 100%;
     }
 
-    &-caps {
+    &--caps {
       background-color: $secondary-surface2;
       min-width: initial;
       width: 100%;
     }
 
-    &-shift {
+    &--shift {
       background-color: $secondary-surface2;
       min-width: initial;
       width: 100%;
     }
 
-    &-enter {
+    &--enter {
       min-width: calc(var(--key-size) * 2);
       background-color: $secondary-surface2;
     }
 
-    &-backspace {
+    &--backspace {
       min-width: calc(var(--key-size) * 2);
       background-color: $secondary-surface2;
     }
 
-    &-space {
+    &--space {
       min-width: calc(var(--key-size) * 13);
     }
 
-    &-active {
+    &--active {
       background-color: $primary-surface3;
       color: $primary-text1;
     }
 
-    &-skeleton {
+    &--skeleton {
       background-color: $skeleton-surface2;
       color: $skeleton-surface2;
       box-shadow: none;
     }
 
-    &-disabled span,
-    &-disabled {
+    &--disabled span,
+    &--disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
