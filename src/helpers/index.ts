@@ -1,34 +1,49 @@
+import classNames, {ArgumentArray} from 'classnames';
 import {prefix} from '../settings';
 
-export const classPrefix = (
-  styles: Record<string, string>,
-  modifier: string,
-  conditions?: {[key: string]: boolean | undefined}[],
-  optionalPrefix?: string
-) => {
-  const classPrefix = {
-    [styles[`${optionalPrefix || prefix}-${modifier}`]]: true,
-  };
+export class classPrefix {
+  styles: Record<string, string>;
+  modifier: string;
+  prefix: typeof prefix;
 
-  if (typeof conditions !== 'undefined') {
-    for (let i = 0; i < conditions.length; i++) {
-      const condition = conditions[i];
-      const keys = Object.keys(condition);
-      const values = Object.values(condition);
+  constructor(styles: Record<string, string>, modifier: string) {
+    this.styles = styles;
+    this.modifier = modifier;
+    this.prefix = prefix;
+  }
+
+  create(
+    conditions?: {[key: string]: boolean | undefined},
+    ...others: ArgumentArray
+  ) {
+    const prefixes = {
+      [this.styles[`${this.prefix}-${this.modifier}`]]: true,
+    };
+
+    if (typeof conditions !== 'undefined') {
+      const keys = Object.keys(conditions);
+      const values = Object.values(conditions);
 
       for (let j = 0; j < keys.length; j++) {
         const key = keys[j];
         const value = values[j];
 
         if (value === true) {
-          classPrefix[
-            styles[`${optionalPrefix || prefix}-${modifier}-${key}`]
-          ] = true;
+          prefixes[this.styles[`${this.prefix}-${this.modifier}--${key}`]] =
+            true;
         }
       }
     }
+
+    return classNames(...(others as ArgumentArray), prefixes);
   }
 
-  console.log(classPrefix);
-  return classPrefix;
-};
+  action(action: string, modifier?: string, condition = true) {
+    const prefixes = {
+      [this.styles[`${this.prefix}-${modifier || this.modifier}--${action}`]]:
+        condition,
+    };
+
+    return classNames(prefixes);
+  }
+}
