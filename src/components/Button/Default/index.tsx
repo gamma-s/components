@@ -6,11 +6,9 @@
 /**
  * Module dependencies
  */
-import classNames from 'classnames';
-
 import {ButtonText} from '../../Typography';
 import {IButton} from './index.type';
-import {prefix} from '../../../settings';
+import {classPrefix} from '../../../helpers';
 
 import styles from './index.module.scss';
 
@@ -26,22 +24,22 @@ const Button = ({
   children,
   ...other
 }: IButton) => {
-  const MODIFIER = 'button';
+  const classNames = new classPrefix(styles, 'button');
 
-  const buttonClassPrefix = {
-    [styles[`${prefix}-${MODIFIER}`]]: true,
-    [styles[`${prefix}-${MODIFIER}--sm`]]: small,
-    [styles[`${prefix}-${MODIFIER}--primary`]]: kind === 'primary',
-    [styles[`${prefix}-${MODIFIER}--danger`]]: kind === 'danger',
-    [styles[`${prefix}-${MODIFIER}--secondary`]]: kind === 'secondary',
-    [styles[`${prefix}-${MODIFIER}--ghost`]]: kind === 'ghost',
-    [styles[`${prefix}-${MODIFIER}--tertiary`]]: kind === 'tertiary',
-    [styles[`${prefix}-${MODIFIER}--context`]]: kind === 'context',
-    [styles[`${prefix}-${MODIFIER}--disabled`]]: disabled,
-    [styles[`${prefix}-${MODIFIER}--skeleton`]]: skeleton,
-  };
-
-  const buttonClasses = classNames(className, buttonClassPrefix);
+  const buttonClasses = classNames.create(
+    {
+      sm: small,
+      primary: kind === 'primary',
+      danger: kind === 'danger',
+      secondary: kind === 'secondary',
+      ghost: kind === 'ghost',
+      tertiary: kind === 'tertiary',
+      context: kind === 'context',
+      disabled: disabled,
+      skeleton: skeleton,
+    },
+    className
+  );
 
   const commonProps = {
     className: buttonClasses,
@@ -56,7 +54,7 @@ const Button = ({
   if (typeof href === 'undefined') {
     return (
       <button {...other} {...commonProps} {...otherProps}>
-        <ButtonText className={styles[`${prefix}-button-text`]}>
+        <ButtonText className={classNames.action('text')}>
           {children}
         </ButtonText>
       </button>
@@ -70,7 +68,7 @@ const Button = ({
 
     return (
       <a {...other} {...anchorProps} {...commonProps} {...otherProps}>
-        <ButtonText className={styles[`${prefix}-button-text`]}>
+        <ButtonText className={classNames.action('text')}>
           {children}
         </ButtonText>
       </a>
