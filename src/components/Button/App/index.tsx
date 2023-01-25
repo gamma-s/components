@@ -6,10 +6,8 @@
 /**
  * Module dependencies
  */
-import classNames from 'classnames';
-
 import {Button} from './index.type';
-import {prefix} from '../../../settings';
+import {classPrefix} from '../../../helpers';
 
 import styles from './index.module.scss';
 
@@ -48,19 +46,21 @@ const AppButton = ({
   buttonImage,
   ...other
 }: Button) => {
-  const buttonClassPrefix = {
-    [styles[`${prefix}-app-button`]]: true,
-    [styles[`${prefix}-app-button--sm`]]: small,
-    [styles[`${prefix}-app-button--primary`]]: kind === 'primary',
-    [styles[`${prefix}-app-button--danger`]]: kind === 'danger',
-    [styles[`${prefix}-app-button--secondary`]]: kind === 'secondary',
-    [styles[`${prefix}-app-button--ghost`]]: kind === 'ghost',
-    [styles[`${prefix}-app-button--tertiary`]]: kind === 'tertiary',
-    [styles[`${prefix}-app-button--disabled`]]: disabled,
-    [styles[`${prefix}-app-button--skeleton`]]: skeleton,
-  };
+  const classNames = new classPrefix(styles, 'app-button');
 
-  const buttonClasses = classNames(className, buttonClassPrefix);
+  const buttonClasses = classNames.create(
+    {
+      sm: small,
+      primary: kind === 'primary',
+      danger: kind === 'danger',
+      secondary: kind === 'secondary',
+      ghost: kind === 'ghost',
+      tertiary: kind === 'tertiary',
+      disabled: disabled,
+      skeleton: skeleton,
+    },
+    className
+  );
 
   const commonProps = {
     className: buttonClasses,
@@ -78,16 +78,12 @@ const AppButton = ({
         {typeof children !== 'undefined' ? (
           children
         ) : (
-          <div className={styles[`${prefix}-app-button--image`]}>
+          <div className={classNames.action('image')}>
             <img src={buttonImage} alt={buttonDescription} />
           </div>
         )}
-        {opened && (
-          <div className={styles[`${prefix}-app-button--opened`]}></div>
-        )}
-        {active && (
-          <div className={styles[`${prefix}-app-button--active`]}></div>
-        )}
+        {opened && <div className={classNames.action('opened')}></div>}
+        {active && <div className={classNames.action('active')}></div>}
       </button>
     );
   } else {
@@ -103,16 +99,12 @@ const AppButton = ({
         {typeof children !== 'undefined' ? (
           children
         ) : (
-          <div className={styles[`${prefix}-app-button--image`]}>
+          <div className={classNames.action('image')}>
             <img src={buttonImage} alt={buttonDescription} />
           </div>
         )}
-        {opened && (
-          <div className={styles[`${prefix}-app-button--opened`]}></div>
-        )}
-        {active && (
-          <div className={styles[`${prefix}-app-button--active`]}></div>
-        )}
+        {opened && <div className={classNames.action('opened')}></div>}
+        {active && <div className={classNames.action('active')}></div>}
       </a>
     );
   }
