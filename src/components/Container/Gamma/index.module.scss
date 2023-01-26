@@ -23,14 +23,14 @@
       calc(var(--primary-lightness) + var(--surface1-lightness-gap)),
       0.8
     );
+  }
 
-    &-header {
-      padding: 1rem 0;
-      color: $primary-text1;
-      display: flex;
-      font-weight: 400;
-      font-size: 1.25rem;
-    }
+  &--header {
+    padding: 0 1rem;
+    color: $primary-text1;
+    display: flex;
+    font-weight: 400;
+    font-size: 1.25rem;
   }
 }
 

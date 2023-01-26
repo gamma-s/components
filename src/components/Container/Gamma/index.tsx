@@ -21,8 +21,12 @@ const Gamma = ({
   children,
   className,
   opened,
+  header,
   ...other
-}: React.HTMLAttributes<HTMLDivElement> & {opened: boolean}) => {
+}: React.HTMLAttributes<HTMLDivElement> & {
+  opened: boolean;
+  header: string;
+}) => {
   const classNames = new classPrefix(styles, 'gamma');
 
   const container = classNames.create(
@@ -38,7 +42,10 @@ const Gamma = ({
 
   return (
     <div {...other} {...commonProps}>
-      <div className={classNames.action('content')}>{children}</div>
+      <div className={classNames.action('content')}>
+        <div className={classNames.action('header')}>{header}</div>
+        {children}
+      </div>
     </div>
   );
 };

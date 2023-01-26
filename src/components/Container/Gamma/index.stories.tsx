@@ -2,6 +2,7 @@ import {ComponentMeta, ComponentStory} from '@storybook/react';
 import AppButton from '../../Button/App';
 import ControllerButton from '../../Button/Controller';
 import TabButton, {NewTab, TabSeperator} from '../../Button/Tab';
+import {Header3} from '../../Typography';
 import {Activity, Apps, Tabs} from '../Activity';
 import {AppControls, Controls, ControlsLeft, ControlsRight} from '../Controls';
 
@@ -20,7 +21,7 @@ export const ControlsContainer: ComponentStory<typeof GammaRoot> = ({
   return (
     <>
       <GammaRoot {...args}>
-        <Gamma opened={true}>
+        <Gamma opened={true} header="Activity">
           <Activity {...args}>
             <>
               <Apps {...args}>
