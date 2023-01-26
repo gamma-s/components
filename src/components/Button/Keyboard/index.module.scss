@@ -6,7 +6,7 @@
 
     border: none;
     border-radius: 4px;
-    background-color: $secondary-surface3;
+    background-image: linear-gradient(45deg, $primary-surface2, $primary-surface3);
     font-weight: 400;
     min-width: var(--key-size);
     height: var(--key-size);
@@ -16,11 +16,11 @@
     flex-wrap: nowrap;
     font-size: calc(var(--key-size) / 3.4);
     flex-direction: column;
-    box-shadow: 0 0 0 2px $secondary-surface4, inset -1px 0px 10px $secondary-surface1;
-    color: $secondary-text1;
+    color: $primary-text1;
+    box-shadow: 0 0 0 2px $primary-surface3, inset 0 0px 6px $primary-surface1;
 
     &:hover {
-      box-shadow: inset 0 0 0 2px rgb(var($secondary-surface2));
+      box-shadow: 0 0 0 2px $primary-text1, inset -1px 0px 10px $primary-surface1;
       cursor: pointer;
     }
 
@@ -30,39 +30,36 @@
 
     &--alt {
       font-weight: 200;
-      color: $secondary-text2;
+      color: $primary-text2;
     }
 
     &--tab {
-      background-color: $secondary-surface2;
       min-width: initial;
       width: 100%;
     }
 
     &--caps {
-      background-color: $secondary-surface2;
       min-width: initial;
       width: 100%;
     }
 
     &--shift {
-      background-color: $secondary-surface2;
       min-width: initial;
       width: 100%;
     }
 
     &--enter {
       min-width: calc(var(--key-size) * 2);
-      background-color: $secondary-surface2;
     }
 
     &--backspace {
-      min-width: calc(var(--key-size) * 2);
-      background-color: $secondary-surface2;
+      min-width: initial;
+      width: 100%;
+      color: $primary-text2;
     }
 
     &--space {
-      min-width: calc(var(--key-size) * 13);
+      min-width: calc(var(--key-size) * 12);
     }
 
     &--active {
