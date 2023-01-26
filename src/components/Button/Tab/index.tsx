@@ -1,4 +1,3 @@
-t;
 /**
  * @fileoverview TabButton component, which is used in the Tab component in.
  * Shows the opened tabs in the browser.
