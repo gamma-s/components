@@ -8,3 +8,16 @@
 @mixin primary-font {
   font-family: "IBM Plex Sans", sans-serif;
 }
+
+@mixin slide-back-top {
+  animation: slide-back-top 0.45s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+
+  @keyframes slide-back-top {
+    0% {
+      transform: translateZ(0) translateY(0);
+    }
+    100% {
+      transform: translateZ(-100px) translateY(-500px);
+    }
+  }
+}
