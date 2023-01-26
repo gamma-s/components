@@ -1,0 +1,47 @@
+.gds-gamma {
+  display: none;
+  &--opened {
+    display: block;
+
+    &--content {
+      bottom: -500px;
+      @include slide-back-top;
+    }
+  }
+
+  &--content {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-top: 1rem;
+    z-index: 2147483646;
+    backdrop-filter: blur(10px);
+    background-color: hsla(
+      var(--primary-hue),
+      calc(var(--primary-saturation) + var(--surface1-saturation-gap)),
+      calc(var(--primary-lightness) + var(--surface1-lightness-gap)),
+      0.8
+    );
+
+    &-header {
+      padding: 1rem 0;
+      color: $primary-text1;
+      display: flex;
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.gds-root {
+  font-weight: 400;
+  font-family: "IBM Plex Sans", Helvetica Neue, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  *::selection:not(input) {
+    background-color: transparent;
+  }
+}
