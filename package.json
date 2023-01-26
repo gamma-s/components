@@ -24,7 +24,6 @@
     "posttest": "npm run lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
   "devDependencies": {
