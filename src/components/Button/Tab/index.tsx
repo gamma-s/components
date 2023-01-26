@@ -1,3 +1,4 @@
+t;
 /**
  * @fileoverview TabButton component, which is used in the Tab component in.
  * Shows the opened tabs in the browser.
@@ -6,8 +7,6 @@
 /**
  * Module dependencies
  */
-import classNames from 'classnames';
-
 import {Button} from './index.type';
 import ContextMenu from '../../ContextMenu';
 import {prefix} from '../../../settings';
@@ -31,7 +30,7 @@ import {classPrefix} from '../../../helpers';
  * @param {Object} props.other
  * @constructor
  */
-const TabButton = ({
+export const TabButton = ({
   children,
   className,
   disabled,
@@ -95,6 +94,18 @@ const TabButton = ({
       )}
     </div>
   );
+};
+
+export const TabSeperator = () => {
+  const classNames = new classPrefix(styles, 'tab-seperator');
+
+  return <div className={classNames.create()} />;
+};
+
+export const NewTab = () => {
+  const classNames = new classPrefix(styles, 'new-tab');
+
+  return <div className={classNames.create()}>+</div>;
 };
 
 export default TabButton;
