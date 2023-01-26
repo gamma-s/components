@@ -1,0 +1,39 @@
+.gds-keyboard-row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.gds-keyboard-grid {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.gds-keyboard-wrapper {
+  display: flex;
+  background-color: $primary-surface1;
+  justify-content: center;
+  width: 100%;
+  backdrop-filter: blur(12px);
+
+  &--container {
+    padding: 1rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.gds-keyboard-grid.gds-keyboard-grid--opened {
+  display: flex;
+}
