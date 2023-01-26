@@ -60,11 +60,6 @@ export const Tabs = ({
     [styles[`${prefix}-tab-button-container`]]: true,
   };
 
-  const newTabClassPrefix = {
-    [styles[`${prefix}-tab-button--new-tab`]]: true,
-    [styles[`${prefix}-tab-button-item`]]: true,
-  };
-
   const buttonClasses = classNames(className, containerClassPrefix);
 
   const commonProps = {
@@ -72,14 +67,9 @@ export const Tabs = ({
   };
 
   return (
-    <>
-      <div {...other} {...commonProps}>
-        {children}
-      </div>
-      <div onClick={onClickNewTab} className={classNames(newTabClassPrefix)}>
-        +
-      </div>
-    </>
+    <div {...other} {...commonProps}>
+      {children}
+    </div>
   );
 };
 
