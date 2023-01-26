@@ -2,7 +2,3 @@
 
 @import "abstracts/variables";
 @import "abstracts/mixins";
-
-html > :global(.sb-show-main) {
-  background-color: $primary-surface1;
-}
