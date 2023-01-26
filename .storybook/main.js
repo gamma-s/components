@@ -1,5 +1,7 @@
 const config = {
   viteFinal(config) {
+    config.base = process.env.BASE_PATH || config.base;
+
     config.css = {
       preprocessorOptions: {
         scss: {

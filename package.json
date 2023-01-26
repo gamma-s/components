@@ -23,7 +23,7 @@
     "pretest": "npm run compile",
     "posttest": "npm run lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "BASE_PATH=/hsl-components/ && build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
   "devDependencies": {
