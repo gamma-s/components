@@ -108,6 +108,7 @@ docs/
 **/.DS_Store
 
 .idea
-./build
+./build/
+./storybook-static/
 
 .yarn/
