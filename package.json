@@ -4,6 +4,7 @@
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
+  "homepage": "http://gamma-s.github.io/hsl-components",
   "files": [
     "build/src"
   ],
@@ -22,7 +23,9 @@
     "pretest": "npm run compile",
     "posttest": "npm run lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^6.5.15",
@@ -38,6 +41,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.0.0",
     "classnames": "^2.3.2",
+    "gh-pages": "^5.0.0",
     "gts": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
