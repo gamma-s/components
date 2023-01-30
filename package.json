@@ -1,10 +1,10 @@
 {
   "name": "components",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
-  "homepage": "http://gamma-s.github.io/hsl-components",
+  "homepage": "http://gamma-s.github.io/components",
   "files": [
     "build/src"
   ],
@@ -23,7 +23,7 @@
     "pretest": "npm run compile",
     "posttest": "npm run lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -- --preview-url=/hsl-components/iframe.html",
+    "build-storybook": "build-storybook -- --preview-url=/components/iframe.html",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
   "devDependencies": {

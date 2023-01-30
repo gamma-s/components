@@ -1,6 +1,6 @@
 const config = {
   viteFinal(config) {
-    config.base = '/hsl-components/' || config.base;
+    config.base = '/components/' || config.base;
 
     config.css = {
       preprocessorOptions: {
