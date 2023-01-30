@@ -15,8 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm run compile
-
+      - run: |
+        yarn
+        yarn compile
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
