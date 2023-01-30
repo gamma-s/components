@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "@gamma-s/components",
   "version": "1.0.0",
   "description": "",
   "main": "build/src/index.js",
@@ -40,6 +40,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.0.0",
     "classnames": "^2.3.2",
+    "cz-conventional-changelog": "^3.3.0",
     "gh-pages": "^5.0.0",
     "gts": "^3.1.1",
     "react": "^18.2.0",
@@ -47,5 +48,13 @@
     "sass": "^1.57.1",
     "typescript": "~4.7.0",
     "vite": "^4.0.3"
+  },
+  "publishConfig": {
+    "@gamma-s:registry": "https://npm.pkg.github.com"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
