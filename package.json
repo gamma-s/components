@@ -1,6 +1,6 @@
 {
   "name": "@gamma-s/components",
-  "version": "1.0.0",
+  "version": "1.22.1",
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -56,5 +56,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "resolutions": {
+    "content": "portal:/Users/canerakdas/Workspace/extension/packages/content",
+    "background": "portal:/Users/canerakdas/Workspace/extension/packages/background"
+  },
+  "packageManager": "yarn@1.22.1"
 }
