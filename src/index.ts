@@ -23,6 +23,22 @@ import {
 
 import ContextMenu from './components/ContextMenu';
 
+import {
+  Body1,
+  Body2,
+  Header1,
+  Header2,
+  Header3,
+  Header4,
+  Header5,
+  Header6,
+  ButtonText,
+  CaptionText,
+  OverlineText,
+  Subtitle1,
+  Subtitle2,
+} from './components/Typography';
+
 export {
   App,
   Button,
@@ -42,4 +58,17 @@ export {
   KeyboardRow,
   KeyboardGrid,
   ContextMenu,
+  Body1,
+  Body2,
+  Header1,
+  Header2,
+  Header3,
+  Header4,
+  Header5,
+  Header6,
+  ButtonText,
+  CaptionText,
+  OverlineText,
+  Subtitle1,
+  Subtitle2,
 };
