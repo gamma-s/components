@@ -10,5 +10,6 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["src/**/*.ts", "test/**/*.ts", "src/**/*.tsx", "test/**/*.tsx"]
+  "include": ["src/**/*.ts", "test/**/*.ts", "src/**/*.tsx", "test/**/*.tsx"],
+  "exclude": ["node_modules", "build", "**/*.stories.tsx"]
 }
